@@ -1,0 +1,310 @@
+/* ===== VARIABLES ===== */
+:root {
+  --verde:       #2ecc71;
+  --verde-dark:  #27ae60;
+  --rojo:        #e74c3c;
+  --fondo:       #0f1117;
+  --fondo2:      #1a1d27;
+  --card:        #22263a;
+  --borde:       #2e3352;
+  --texto:       #eef0f7;
+  --texto-suave: #8890b0;
+  --acento:      #5b8cff;
+}
+
+/* ===== RESET ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--fondo);
+  color: var(--texto);
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* FONDO DECORATIVO */
+.bg-decoration {
+  position: fixed;
+  top: -200px; left: -200px;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(91,140,255,0.08) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  animation: fadeUp 0.5s ease both;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== HEADER ===== */
+.header {
+  margin-bottom: 2rem;
+}
+
+.btn-back {
+  display: inline-block;
+  color: var(--texto-suave);
+  text-decoration: none;
+  font-size: 0.85rem;
+  margin-bottom: 1.2rem;
+  transition: color 0.2s;
+}
+.btn-back:hover { color: var(--acento); }
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.header-icon {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--texto);
+  letter-spacing: -0.03em;
+}
+
+.subtitle {
+  color: var(--texto-suave);
+  font-size: 0.95rem;
+}
+
+/* ===== FORMULARIO ===== */
+.form-section {
+  background: var(--card);
+  border: 1px solid var(--borde);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.form-group {
+  display: flex;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+
+.form-group input[type="text"] {
+  flex: 1 1 200px;
+  padding: 0.75rem 1rem;
+  background: var(--fondo2);
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  color: var(--texto);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.form-group input[type="text"]:focus {
+  border-color: var(--acento);
+}
+
+.form-group input[type="number"] {
+  width: 80px;
+  padding: 0.75rem 0.8rem;
+  background: var(--fondo2);
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  color: var(--texto);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.form-group input[type="number"]:focus {
+  border-color: var(--acento);
+}
+
+#btnAgregar {
+  padding: 0.75rem 1.4rem;
+  background: var(--verde);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  white-space: nowrap;
+}
+#btnAgregar:hover  { background: var(--verde-dark); }
+#btnAgregar:active { transform: scale(0.97); }
+
+.mensaje-error {
+  color: var(--rojo);
+  font-size: 0.85rem;
+  margin-top: 0.6rem;
+  min-height: 1.2em;
+}
+
+/* ===== STATS BAR ===== */
+.stats-bar {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: var(--card);
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  padding: 0.9rem 1.4rem;
+  margin-bottom: 1.2rem;
+}
+
+.stat {
+  display: flex;
+  align-items: baseline;
+  gap: 0.35rem;
+}
+
+.stat-num {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--acento);
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: var(--texto-suave);
+}
+
+.btn-limpiar {
+  margin-left: auto;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: 1px solid var(--rojo);
+  color: var(--rojo);
+  border-radius: 8px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.btn-limpiar:hover {
+  background: var(--rojo);
+  color: #fff;
+}
+
+/* ===== LISTA ===== */
+.lista-section {
+  background: var(--card);
+  border: 1px solid var(--borde);
+  border-radius: 16px;
+  padding: 1.2rem;
+  min-height: 120px;
+}
+
+.lista-vacia {
+  text-align: center;
+  color: var(--texto-suave);
+  font-size: 0.95rem;
+  padding: 2.5rem 1rem;
+}
+
+#listaProductos {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+/* ITEM */
+.item-producto {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--fondo2);
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+  animation: slideIn 0.25s ease both;
+  transition: border-color 0.2s;
+}
+.item-producto:hover { border-color: var(--acento); }
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-16px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.item-nombre {
+  flex: 1;
+  font-size: 0.97rem;
+  color: var(--texto);
+}
+
+.item-cantidad {
+  background: var(--borde);
+  color: var(--acento);
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+  min-width: 36px;
+  text-align: center;
+}
+
+.btn-eliminar {
+  background: transparent;
+  border: none;
+  color: var(--texto-suave);
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0.2rem 0.4rem;
+  border-radius: 6px;
+  transition: color 0.2s, background 0.2s;
+  line-height: 1;
+}
+.btn-eliminar:hover {
+  color: var(--rojo);
+  background: rgba(231,76,60,0.1);
+}
+
+/* ITEM COMPLETADO */
+.item-producto.completado .item-nombre {
+  text-decoration: line-through;
+  color: var(--texto-suave);
+}
+
+.btn-check {
+  background: transparent;
+  border: 2px solid var(--borde);
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+.btn-check:hover { border-color: var(--verde); }
+.item-producto.completado .btn-check {
+  background: var(--verde);
+  border-color: var(--verde);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 480px) {
+  h1 { font-size: 1.7rem; }
+  .form-group { flex-direction: column; }
+  .form-group input[type="number"] { width: 100%; }
+}
