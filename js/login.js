@@ -28,14 +28,27 @@ passwordInput.addEventListener('blur', validatePassword);
 
 // Limpiar errores al escribir
 emailInput.addEventListener('input', () => {
-    emailError.textContent = '';
-    emailInput.classList.remove('error');
+    clearFieldError(emailError, emailInput);
 });
 
 passwordInput.addEventListener('input', () => {
-    passwordError.textContent = '';
-    passwordInput.classList.remove('error');
+    clearFieldError(passwordError, passwordInput);
 });
+
+/**
+ * DEMO NOTE: Este proyecto usa credenciales hardcodeadas solo para demostración.
+ * En producción, nunca incluya credenciales en el código cliente o en HTML.
+ * Use autenticación con servidor seguro (HTTPS, tokens JWT, etc.)
+ */
+
+/**
+ * Limpia los errores de un campo de formulario
+ */
+function clearFieldError(errorElement, inputElement) {
+    errorElement.textContent = '';
+    errorElement.classList.remove('visible');
+    inputElement.classList.remove('error');
+}
 
 /**
  * Valida el formato del correo electrónico
@@ -91,7 +104,7 @@ function handleLogin(e) {
     e.preventDefault();
     
     // Limpiar mensaje de error anterior
-    loginError.textContent = '';
+    clearLoginError();
 
     // Validar campos
     const emailValid = validateEmail();
@@ -123,9 +136,8 @@ function handleLogin(e) {
             // Redirigir a la página principal
             window.location.href = 'index.html';
         } else {
-            // Mostrar error
-            loginError.textContent = 'Correo o contraseña incorrectos';
-            loginError.style.marginBottom = '15px';
+            // Mostrar error usando clase CSS
+            showLoginError('Correo o contraseña incorrectos');
 
             // Re-habilitar botón
             loginBtn.disabled = false;
@@ -136,4 +148,20 @@ function handleLogin(e) {
             passwordInput.focus();
         }
     }, 500);
+}
+
+/**
+ * Muestra un error de login usando clase CSS en lugar de estilos inline
+ */
+function showLoginError(message) {
+    loginError.textContent = message;
+    loginError.classList.add('visible');
+}
+
+/**
+ * Limpia el error de login
+ */
+function clearLoginError() {
+    loginError.textContent = '';
+    loginError.classList.remove('visible');
 }

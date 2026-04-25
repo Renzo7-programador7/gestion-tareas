@@ -17,7 +17,13 @@ body {
 .login-container {
     width: 100%;
     max-width: 400px;
-    animation: slideIn 0.5s ease-out;
+}
+
+/* Solo animar si el usuario no prefiere reducir movimiento */
+@media (prefers-reduced-motion: no-preference) {
+    .login-container {
+        animation: slideIn 0.5s ease-out;
+    }
 }
 
 @keyframes slideIn {
@@ -100,6 +106,11 @@ body {
     font-size: 12px;
     margin-top: 5px;
     min-height: 16px;
+}
+
+/* Clase para mostrar error de login con espaciado adicional */
+.error-message.visible {
+    margin-bottom: 15px;
 }
 
 .login-btn {
