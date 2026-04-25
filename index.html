@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Gestión de Tareas</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="header-content">
+                <h1 class="app-title">📋 Gestión Integral</h1>
+                <div class="user-info">
+                    <span id="userName" class="user-name">Usuario</span>
+                    <button class="logout-btn" onclick="handleLogout()">Cerrar Sesión</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <section class="dashboard-section">
+                <h2 class="section-title">Mis Opciones</h2>
+                <p class="section-subtitle">Accede a las diferentes funcionalidades</p>
+
+                <!-- Cards Container -->
+                <div class="cards-container">
+                    <!-- Card 1: Tareas -->
+                    <div class="dashboard-card">
+                        <div class="card-icon">📝</div>
+                        <h3 class="card-title">Tareas</h3>
+                        <p class="card-description">Gestiona tus tareas diarias y organiza tu trabajo de forma eficiente</p>
+                        <div class="card-stats">
+                            <span class="stat">Productividad</span>
+                        </div>
+                        <a href="tareas.html" class="card-btn">Acceder</a>
+                    </div>
+
+                    <!-- Card 2: Compras -->
+                    <div class="dashboard-card">
+                        <div class="card-icon">🛒</div>
+                        <h3 class="card-title">Compras</h3>
+                        <p class="card-description">Controla tu lista de compras y presupuestos con nuestro gestor integrado</p>
+                        <div class="card-stats">
+                            <span class="stat">Presupuesto</span>
+                        </div>
+                        <a href="compras.html" class="card-btn">Acceder</a>
+                    </div>
+
+                    <!-- Card 3: Actividades -->
+                    <div class="dashboard-card">
+                        <div class="card-icon">🎯</div>
+                        <h3 class="card-title">Actividades</h3>
+                        <p class="card-description">Registra y monitorea todas tus actividades y eventos importantes</p>
+                        <div class="card-stats">
+                            <span class="stat">Seguimiento</span>
+                        </div>
+                        <a href="actividades.html" class="card-btn">Acceder</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="dashboard-footer">
+            <p>&copy; 2026 Gestión Integral. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
