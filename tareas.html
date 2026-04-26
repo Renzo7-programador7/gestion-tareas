@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/tareas.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="header-nav">
+      <ul>
+        <li><a class="nav-tareas" href="">Todas las Tareas</a></li>
+        <li><a class="nav-tareas" href="">Tareas Concluidas</a></li>
+        <li><a class="nav-tareas" href="">Tareas Pendientes</a></li>
+      </ul>
+    </nav>
+    <section class="box-tareas todas">
+      <h1 class="title">Lista de Tareas</h1>
+      <label for="">Agregar Tarea:</label>
+      <div class="grupo-input">
+        <input type="text" />
+        <button class="btn-agregar">Agregar</button>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th colspan="2">Lista de tareas</th>
+          </tr>
+          <tr>
+            <th>Tareas</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Tareas a Agregar</td>
+            <td>
+              <button class="btn-concluidas">
+                <ion-icon name="checkmark-circle-outline"></ion-icon>
+              </button>
+              <button class="btn-modificar">
+                <ion-icon name="create"></ion-icon>
+              </button>
+              <button class="btn-eliminar">
+                <ion-icon name="trash"></ion-icon>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <!-- OCULTAR Y SOLO MOSTRAR AL HACER CLICK -->
+    <!-- <section class="box-tareas concluidas"><h1>Todas las Tareas</h1></section>
+    <section class="box-tareas pendientes"><h1>Tareas Concluidas</h1></section>
+    <section class="box-tareas eliminadas"><h1>Tareas Eliminadas</h1></section> -->
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="/js/tareas.js"></script>
+  </body>
+</html>
