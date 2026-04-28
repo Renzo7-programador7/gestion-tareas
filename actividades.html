@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Actividades</title>
+
+  <!-- Fuente pro -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/actividades.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <h1>Lista de Actividades</h1>
+    <p class="subtitle">Organiza tu día de forma simple y eficiente</p>
+
+    <div class="card form">
+      <input type="text" id="inputActividad" placeholder="Escribe una actividad...">
+
+      <select id="prioridad">
+        <option value="baja">🟢 Baja</option>
+        <option value="media">🟡 Media</option>
+        <option value="alta">🔴 Alta</option>
+      </select>
+
+      <button onclick="agregarActividad()">Agregar</button>
+    </div>
+
+    <div class="stats">
+      <div class="card stat">
+        <span id="total">0</span>
+        <p>Total</p>
+      </div>
+      <div class="card stat">
+        <span id="pendientes">0</span>
+        <p>Pendientes</p>
+      </div>
+      <div class="card stat">
+        <span id="completadas">0</span>
+        <p>Completadas</p>
+      </div>
+    </div>
+
+    <div class="card lista">
+      <div class="header-lista">
+        <h2>Mis Actividades</h2>
+        <button class="limpiar" onclick="limpiar()">Limpiar</button>
+      </div>
+      <ul id="listaActividades"></ul>
+    </div>
+
+  </div>
+
+  <script src="js/actividades.js"></script>
+</body>
+</html>
