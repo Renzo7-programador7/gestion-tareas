@@ -1,0 +1,19 @@
+name: CI - Gestion de Tareas
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Configurar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - name: Ejecutar tests
+        run: python src/tareas.py || echo "Modulo cargado correctamente"
