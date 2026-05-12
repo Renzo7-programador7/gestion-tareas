@@ -5,7 +5,8 @@ def agregar_tarea(titulo, descripcion=""):
         "id": len(tareas) + 1,
         "titulo": titulo,
         "descripcion": descripcion,
-        "completada": False
+        "completada": False,
+        "categoria": "general"
     }
     tareas.append(tarea)
     return tarea
@@ -19,3 +20,6 @@ def completar_tarea(id_tarea):
             t["completada"] = True
             return t
     return None
+
+def filtrar_por_categoria(categoria):
+    return [t for t in tareas if t["categoria"] == categoria]
