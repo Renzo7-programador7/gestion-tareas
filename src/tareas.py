@@ -7,7 +7,8 @@ def agregar_tarea(titulo, descripcion=""):
         "descripcion": descripcion,
         "completada": False,
         "categoria": "general",
-        "prioridad": "normal"
+        "prioridad": "normal",
+        "etiqueta": "sin-etiqueta"
     }
     tareas.append(tarea)
     return tarea
@@ -29,5 +30,12 @@ def tarea_prioritaria(id_tarea):
     for t in tareas:
         if t["id"] == id_tarea:
             t["prioridad"] = "alta"
+            return t
+    return None
+
+def etiquetar_tarea(id_tarea, etiqueta):
+    for t in tareas:
+        if t["id"] == id_tarea:
+            t["etiqueta"] = etiqueta
             return t
     return None
