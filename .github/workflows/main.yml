@@ -27,16 +27,13 @@ jobs:
           npm install -g stylelint stylelint-config-standard
 
       - name: Validar archivos HTML
-        run: |
-          htmlhint "**/*.html"
+        run: htmlhint "**/*.html"
 
       - name: Validar archivos JavaScript
-        run: |
-          jshint --esversion=6 $(find . -name "*.js" -not -path "./.github/*")
+        run: jshint --config .jshintrc --esversion=6 $(find . -name "*.js" -not -path "./.github/*")
 
       - name: Validar archivos CSS
-        run: |
-          stylelint "**/*.css"
+        run: stylelint "**/*.css" --config .stylelintrc.json
 
       - name: Pipeline completado
         run: echo "✅ Validación completada con éxito"
