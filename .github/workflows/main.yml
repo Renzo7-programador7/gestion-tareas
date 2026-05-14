@@ -30,7 +30,7 @@ jobs:
         run: htmlhint "**/*.html"
 
       - name: Validar archivos JavaScript
-        run: jshint --config .jshintrc --esversion=6 $(find . -name "*.js" -not -path "./.github/*")
+        run: jshint --config .jshintrc $(find . -name "*.js" -not -path "./.github/*")
 
       - name: Validar archivos CSS
         run: stylelint "**/*.css" --config .stylelintrc.json
