@@ -1,5 +1,5 @@
 name: CI - Gestion de Tareas
-
+# Pipeline de CI para el proyecto de gestion de tareas
 on:
   push:
     branches: [ main, develop ]
