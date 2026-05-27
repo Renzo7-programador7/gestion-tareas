@@ -112,3 +112,4 @@ gestion-tareas/
 - [INSTALACION_Y_EJECUCION.md](INSTALACION_Y_EJECUCION.md)
 - [GITFLOW.md](GITFLOW.md)
 
+## Función A: notificaciones de tareas
