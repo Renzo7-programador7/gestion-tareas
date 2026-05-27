@@ -57,46 +57,6 @@ Aplicación web de gestión personal que permite administrar tareas, registrar c
 
 ---
 
-## 📁 Estructura del Proyecto
-
-```
-gestion-tareas/
-│
-├── index.html              # Dashboard principal — navegación por cards
-├── login.html              # Página de autenticación
-├── tareas.html             # Módulo de gestión de tareas
-├── actividades.html        # Módulo de seguimiento de actividades
-├── compras.html            # Módulo de lista de compras (en desarrollo)
-│
-├── agregar-tarea.js        # Módulo JS para agregar tareas
-├── eliminar-tarea.js       # Módulo JS para eliminar tareas
-├── fix-ui.css              # Correcciones puntuales de estilos UI
-│
-├── css/
-│   ├── login.css           # Estilos del formulario de login
-│   ├── index.css           # Estilos del dashboard principal
-│   ├── tareas.css          # Estilos del módulo de tareas
-│   └── actividades.css     # Estilos del módulo de actividades
-│
-├── js/
-│   ├── login.js            # Validación y autenticación del login
-│   ├── index.js            # Verificación de sesión y carga del dashboard
-│   ├── tareas.js           # Lógica de tareas en el navegador
-│   └── actividades.js      # Lógica de actividades (CRUD + estadísticas)
-│
-├── src/
-│   └── tareas.py           # Módulo Python de gestión de tareas
-│
-├── img/                    # Directorio de recursos de imagen
-│
-├── .htmlhintrc             # Configuración HTMLHint
-├── .jshintrc               # Configuración JSHint (ES6, browser)
-├── .stylelintrc.json       # Configuración Stylelint
-└── .gitignore              # Exclusiones de Git (*.pyc, __pycache__, .env)
-```
-
----
-
 ## 📞 Contacto
 
 | Campo | Detalle |
@@ -112,3 +72,5 @@ gestion-tareas/
 - [INSTALACION_Y_EJECUCION.md](INSTALACION_Y_EJECUCION.md)
 - [GITFLOW.md](GITFLOW.md)
 
+## Función A: notificaciones de tareas
+## Función B: exportar tareas a PDF
