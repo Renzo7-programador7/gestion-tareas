@@ -113,3 +113,4 @@ gestion-tareas/
 - [GITFLOW.md](GITFLOW.md)
 
 ## Función A: notificaciones de tareas
+## Función B: exportar tareas a PDF
