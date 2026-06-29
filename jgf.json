@@ -1,0 +1,12 @@
+{
+  "project": "my-project",
+  "jira": {
+    "url": "https://your-company.atlassian.net",
+    "project": "PROJ"
+  },
+  "github": {
+    "owner": "your-org",
+    "repo": "your-repo"
+  },
+  "defaultBranch": "main"
+}
