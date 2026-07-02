@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/compras.css" />
+    <title>Lista de Compras</title>
+  </head>
+  <body>
+    <nav class="header-nav">
+      <ul>
+        <li><a href="index.html" style="color: white; text-decoration: none; font-weight: bold;">Inicio</a></li>
+        <li><a href="tareas.html" style="color: white; text-decoration: none; font-weight: bold;">Tareas</a></li>
+        <li><a href="actividades.html" style="color: white; text-decoration: none; font-weight: bold;">Actividades</a></li>
+      </ul>
+    </nav>
+
+    <section class="box-compras">
+      <h1 class="title">Lista de Compras</h1>
+
+      <div class="grupo-input">
+        <input type="text" id="input-articulo" placeholder="Nombre del artículo" />
+        <input type="text" id="input-cantidad" placeholder="Cantidad" style="width: 90px;" />
+        <button class="btn-agregar" id="btn-agregar">Agregar</button>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th colspan="3">Mis Compras</th>
+          </tr>
+          <tr>
+            <th>Artículo</th>
+            <th>Cantidad</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="lista-compras">
+          <!-- Los artículos se agregan aquí dinámicamente -->
+        </tbody>
+      </table>
+    </section>
+
+    <script src="js/compras.js"></script>
+  </body>
+</html>
