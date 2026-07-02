@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to top left, #28b487, #7dd56f);
+  min-height: 100vh;
+}
+.header-nav {
+  background: linear-gradient(to top left, #5f4fe7, #7dd56f);
+  padding: 10px 0;
+}
+.header-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+.header-nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.header-nav a:hover {
+  color: #28b487;
+}
+.grupo-input {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+.grupo-input input,
+.grupo-input select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  outline: none;
+}
+.grupo-input input:focus {
+  border-color: #28b487;
+}
+.box-compras {
+  width: 500px;
+  margin: 40px auto;
+  padding: 25px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  text-align: center;
+}
+.title {
+  margin-bottom: 20px;
+  font-size: 26px;
+}
+.btn-agregar {
+  padding: 10px 15px;
+  cursor: pointer;
+  background-color: #28b487;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+.btn-agregar:hover {
+  background-color: #239c74;
+  transform: scale(1.05);
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 25px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+thead tr:first-child th {
+  background-color: #28b487;
+  color: white;
+  font-size: 18px;
+  padding: 12px;
+}
+thead tr:nth-child(2) {
+  background-color: #2fae8f;
+  color: white;
+}
+th, td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+tbody tr {
+  background-color: #ffffff;
+  transition: 0.3s;
+}
+tbody tr:hover {
+  background-color: #f5f5f5;
+}
+button {
+  cursor: pointer;
+  padding: 6px 10px;
+  margin: 3px;
+  border-radius: 6px;
+  border: none;
+  font-size: 13px;
+  transition: 0.3s;
+}
+.btn-comprado {
+  background-color: #2ecc71;
+  color: white;
+}
+.btn-comprado:hover {
+  background-color: #27ae60;
+  transform: scale(1.05);
+}
+.btn-eliminar {
+  background-color: #e74c3c;
+  color: white;
+}
+.btn-eliminar:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
+.comprado {
+  text-decoration: line-through;
+  color: gray;
+  opacity: 0.7;
+}
+.vacio {
+  color: #999;
+  font-style: italic;
+}
