@@ -2,18 +2,25 @@ name: CI - Gestion de Tareas
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, develop ]
   pull_request:
-    branches: [ main ]
+    branches: [ main, develop ]
 
 jobs:
   test:
+    name: Ejecutar pruebas unitarias
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout del código
+        uses: actions/checkout@v4
+
       - name: Configurar Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.11'
-      - name: Ejecutar tests
-        run: python src/tareas.py || echo "Modulo cargado correctamente"
+
+      - name: Instalar pytest
+        run: pip install pytest
+
+      - name: Ejecutar pruebas unitarias
+        run: pytest tests/ -v
